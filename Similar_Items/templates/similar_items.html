@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Similar Items</title>
+</head>
+<body>
+    <h1>Similar Items</h1>
+    <p>Similar items for item {{ item_id }}:</p>
+    <ul>
+        {% for item in similar_items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/">Go back</a></p>
+</body>
+</html>

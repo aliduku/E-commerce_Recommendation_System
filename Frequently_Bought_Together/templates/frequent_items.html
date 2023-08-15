@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frequent Items</title>
+</head>
+<body>
+    <h1>Recommended items for "{{ item_description }}"</h1>
+    <ul>
+        {% for consequents_str in recommended_items %}
+            <li>
+                <strong>Recommended:</strong> {{ item_mapping.loc[consequents_str, 'Description'] }} ({{ consequents_str }})
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/">Go back</a>
+</body>
+</html>
